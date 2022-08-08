@@ -1,0 +1,17 @@
+/* header {
+    padding: 10px;
+
+} */
+
+.form-input {
+    display: block;
+}
+
+.form-input, .btn {
+    width: 100%;
+    padding: 3%;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    border: 2px solid var(--light-dark);
+    border-radius: var(--border-radius);
+  }

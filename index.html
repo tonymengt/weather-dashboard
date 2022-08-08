@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+
+    <header class="columns is-marginless">
+        <div class="column is-12 p-5 is-size-3 has-background-link">Weather Dashboard</div>
+    </header>
+
+    <main class="columns is-marginless">
+        <div class="column is-3 has-background-primary">
+            <!-- <div class="card"> -->
+                <h3>Search for a City:</h3>
+                <form id="search-city" class="city">
+                    <input id="input-location" name="search-location" type="text" autocapitalize="true" class="form-input" placeholder="Search..."/>
+                    <button class="btn" type="submit">Search</button>
+                </form>
+            <!-- </div> -->
+        </div>
+
+
+        <div class="column is-9">
+            <div class="curr-date-container">
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
