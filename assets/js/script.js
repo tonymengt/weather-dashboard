@@ -31,7 +31,7 @@ var quickSearch = function (event) {
 }
 
 var cityInfo = function (city) {
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=9f3f33ce2b83be7d45fd76569bc1fbd2"
+    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=9f3f33ce2b83be7d45fd76569bc1fbd2"
     fetch(apiUrl)
         .then(function (response) {
             if (!response.ok) {
@@ -120,7 +120,7 @@ var getWeatherInfo = function (lat, lon) {
 };
 var locationName = "";
 var reverseCityInfo = function (lat, lon) {
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/reverse?lat=" + lat + "&lon=" + lon + "&limit=1&appid=9f3f33ce2b83be7d45fd76569bc1fbd2"
+    var apiUrl = "https://api.openweathermap.org/geo/1.0/reverse?lat=" + lat + "&lon=" + lon + "&limit=1&appid=9f3f33ce2b83be7d45fd76569bc1fbd2"
     fetch(apiUrl)
         .then(function (response) {
             if (!response.ok) {
