@@ -36,6 +36,7 @@ var cityInfo = function (city) {
         .then(function (response) {
             if (!response.ok) {
                 console.log("response not okay")
+                currentDateEl.textContent="API not found. Please troubleshoot."
             }
             return response.json()
         })
@@ -104,29 +105,35 @@ var getWeatherInfo = function (lat, lon) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&appid=9f3f33ce2b83be7d45fd76569bc1fbd2"
     fetch(apiUrl)
         .then(function (response) {
-            if (response.ok) {
-                return response.json().then(function (data) {
-                    console.log(data);
-
-                    displayWeather(data);
-                    displayForecastWeather(data);
-
-                });
+            if (!response.ok) {
+                console.log("response not okay")
+                currentDateEl.textContent="API not found. Please troubleshoot."
             }
-        });
-}
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data);
+
+            displayWeather(data);
+            displayForecastWeather(data);
+        })  
+};
 var locationName = "";
 var reverseCityInfo = function (lat, lon) {
     var apiUrl = "http://api.openweathermap.org/geo/1.0/reverse?lat=" + lat + "&lon=" + lon + "&limit=1&appid=9f3f33ce2b83be7d45fd76569bc1fbd2"
     fetch(apiUrl)
         .then(function (response) {
-            response.json().then(function (data) {
-                locationName = "";
-                locationName = data[0].name
-
-            })
+            if (!response.ok) {
+                console.log("response not okay")
+                currentDateEl.textContent="API not found. Please troubleshoot."
+            }
+            return response.json()
         })
-}
+        .then(function (data) {
+            locationName = "";
+            locationName = data[0].name
+        })
+};
 
 
 
