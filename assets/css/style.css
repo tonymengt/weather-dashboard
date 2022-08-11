@@ -3,15 +3,104 @@
 
 } */
 
+#pg-title {
+    text-align: center;
+}
+
 .form-input {
     display: block;
 }
 
-.form-input, .btn {
+.form-input {
     width: 100%;
     padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
-    border: 2px solid var(--light-dark);
-    border-radius: var(--border-radius);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.btn {
+    width: 100%;
+    padding: 3%;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    background-color: rgb(0, 174, 255);
+    border: none;
   }
+
+  .curr-date-container {
+
+    padding: 3px;
+  }
+
+  .forecast-date-container {
+    margin-top: 60px;
+  }
+
+ .is-3 h3{
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+ #search-city{
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+ }
+
+ #search-history {
+    padding-top: 20px;
+
+ }
+
+
+ .search-button {
+    width: 100%;
+ }
+
+ .currDate {
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+
+
+.currDateInfo{
+    width: 100%;
+}
+
+ .forecast-title {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+ .forcontain {
+    border-radius: 10px;
+ }
+
+ .forecastDate {
+    text-align: center;
+    font-size: 20px;
+
+ }
+
+ .good {
+    color: white;
+    background-color: green;
+    padding: 0 5px;
+    border-radius: 5px;
+ }
+ .normal {
+    color: white;
+    background-color: orange;
+    padding: 0 5px;
+    border-radius: 5px;
+ }
+ .bad {
+    color: white;
+    background-color: darkred;
+    padding: 0 5px;
+    border-radius: 5px;
+ }

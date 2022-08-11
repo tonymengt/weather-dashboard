@@ -11,27 +11,39 @@
 <body>
 
     <header class="columns is-marginless">
-        <div class="column is-12 p-5 is-size-3 has-background-link">Weather Dashboard</div>
+        <div id="pg-title" class="column is-12 p-5 is-size-3 has-background-primary">Weather Dashboard</div>
     </header>
 
-    <main class="columns is-marginless">
-        <div class="column is-3 has-background-primary">
-            <!-- <div class="card"> -->
-                <h3>Search for a City:</h3>
-                <form id="search-city" class="city">
-                    <input id="input-location" name="search-location" type="text" autocapitalize="true" class="form-input" placeholder="Search..."/>
-                    <button class="btn" type="submit">Search</button>
-                </form>
+    <main class="columns is-marginless is-flex-wrap">
+        <!-- <div class="card"> -->
+            <!-- <div class="card-content"> -->
+                <div class="column is-3">
+                    <!-- <div class="card"> -->
+                        <h3>Search for a City:</h3>
+                        <form id="search-city" class="city">
+                            <input id="input-location" name="search-location" type="text" autocapitalize="true" class="form-input" placeholder="Search..."/>
+                            <button class="btn button is-info" type="submit">Search</button>
+                        </form>
+                        <div id="search-history">
+                        </div>
+
+                    <!-- </div> -->
+                </div>
             <!-- </div> -->
-        </div>
+        <!-- </div> -->
 
 
         <div class="column is-9">
             <div class="curr-date-container">
+                <div class="columns is-flex-wrap-wrap is-marginless is-align-content-center headerInfo"></div>
 
             </div>
 
+            <div class="columns forecast-date-container is-flex-wrap-wrap is-justify-content-space-between">
+
+            </div>
         </div>
+
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
